@@ -1,11 +1,17 @@
 package com.task1;
 
-public class bibliotic {
+public class Library extends Universitet {
    private String Director = "Федор Петрович";
-    public String books;
-    public String chitalnuyZal = "Главный читальный зал";
+    private String [] books = {"Мастер и Маргарита", "Петр I. Экономика Руси", "Петр II. Экономика Руси", "Петр III. Экономика Руси","Петр IV. Экономика Руси", "Петр V. Экономика Руси. Забрать можно у " + Director};
 
-    public String getBooks(int age) {
+    public String RoomForReading = "Главный читальный зал";
+    public String getBooks(int age){
+     return books [getCourseNumber(age)];
+    }
+
+    /*public String getBooks(int age) {
+
+    }
         switch (age) {
             case 17:
                 books = "Петр I. Экономика Руси";
@@ -27,5 +33,5 @@ public class bibliotic {
                 break;
         }
         return books;
-    }
+    }*/
 }
